@@ -1,5 +1,5 @@
 const selectBtnS = document.getElementsByClassName("select-btn");
-console.log(selectBtnS);
+
 let count = 1;
 for (const btn of selectBtnS) {
   btn.addEventListener("click", function () {
@@ -21,6 +21,9 @@ function getInputValueId(id) {
 
 document.getElementById("calculate-btn").addEventListener("click", function () {
   const perPlayerValue = getInputValueId("inputPerPlyaer");
+  if (isNaN(perPlayerValue)) {
+    return alert("please input valid number");
+  }
   const displayExpenses = document.getElementById("player-expenses");
   displayExpenses.innerText = perPlayerValue * 5;
 });
@@ -28,6 +31,9 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 document.getElementById("total-btn").addEventListener("click", function () {
   const managerValue = getInputValueId("manager");
   const coachValue = getInputValueId("coach");
+  if (isNaN(managerValue || coachValue)) {
+    return alert("please input valid number");
+  }
   const displayExpenses = document.getElementById("player-expenses");
   const displayExpensesValue = parseFloat(displayExpenses.innerText);
   const total = managerValue + coachValue + displayExpensesValue;
