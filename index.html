@@ -189,7 +189,7 @@
                   <h5 class="card-title text-center mb-4">Budget</h5>
                   <div class="mb-3 row justify-content-center">
                     <label
-                      for="inputIncome"
+                      for="inputPerPlyaer"
                       class="col-auto text-end col-form-label"
                       >Per Player</label
                     >
@@ -197,15 +197,17 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="inputIncome"
+                        id="inputPerPlyaer"
                       />
                     </div>
                   </div>
                   <div class="d-grid">
-                    <button href="#" class="btn btn-primary">Calculate</button>
+                    <button id="calculate-btn" href="#" class="btn btn-primary">
+                      Calculate
+                    </button>
                   </div>
                   <p class="text-center mt-3">
-                    Plyer Expenses: $<span>00</span>
+                    Plyer Expenses: $<span id="player-expenses">00</span>
                   </p>
 
                   <div class="mb-3 row justify-content-center">
