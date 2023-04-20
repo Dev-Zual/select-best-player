@@ -7,6 +7,7 @@ for (const btn of selectBtnS) {
 
     const ul = document.getElementById("list-container");
     const li = document.createElement("li");
+    li.style.marginBottom = "8px";
     li.innerText = playerName;
     ul.appendChild(li);
     btn.setAttribute("disabled", true);
