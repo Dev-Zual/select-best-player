@@ -211,35 +211,23 @@
                   </p>
 
                   <div class="mb-3 row justify-content-center">
-                    <label
-                      for="inputIncome"
-                      class="col-5 text-end col-form-label"
+                    <label for="manager" class="col-5 text-end col-form-label"
                       >Manager</label
                     >
                     <div class="col-sm-10 col-md-7">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputIncome"
-                      />
+                      <input type="text" class="form-control" id="manager" />
                     </div>
                   </div>
                   <div class="mb-3 row justify-content-center">
-                    <label
-                      for="inputIncome"
-                      class="col-5 text-end col-form-label"
+                    <label for="coach" class="col-5 text-end col-form-label"
                       >Coach</label
                     >
                     <div class="col-sm-10 col-md-7">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputIncome"
-                      />
+                      <input type="text" class="form-control" id="coach" />
                     </div>
                   </div>
                   <div class="d-grid">
-                    <button href="#" class="btn btn-primary">
+                    <button id="total-btn" href="#" class="btn btn-primary">
                       Calculate Total
                     </button>
                   </div>
@@ -247,7 +235,7 @@
                     class="d-flex justify-content-between align-items-center mt-3"
                   >
                     <p class="text-center mt-3">Total:</p>
-                    <h5>$<span>00</span></h5>
+                    <h5>$<span id="display-total">00</span></h5>
                   </div>
                 </div>
               </div>

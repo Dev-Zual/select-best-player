@@ -13,9 +13,24 @@ for (const btn of selectBtnS) {
   });
 }
 
+function getInputValueId(id) {
+  const inputField = document.getElementById(id);
+  const inputValue = parseFloat(inputField.value);
+  return inputValue;
+}
+
 document.getElementById("calculate-btn").addEventListener("click", function () {
-  const perPlayerField = document.getElementById("inputPerPlyaer");
-  const perPlayerValue = parseFloat(perPlayerField.value);
+  const perPlayerValue = getInputValueId("inputPerPlyaer");
   const displayExpenses = document.getElementById("player-expenses");
   displayExpenses.innerText = perPlayerValue * 5;
+});
+
+document.getElementById("total-btn").addEventListener("click", function () {
+  const managerValue = getInputValueId("manager");
+  const coachValue = getInputValueId("coach");
+  const displayExpenses = document.getElementById("player-expenses");
+  const displayExpensesValue = parseFloat(displayExpenses.innerText);
+  const total = managerValue + coachValue + displayExpensesValue;
+  const displayTotal = document.getElementById("display-total");
+  displayTotal.innerText = total;
 });
